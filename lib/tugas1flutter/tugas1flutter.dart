@@ -41,6 +41,7 @@ class Tugas1Futter extends StatelessWidget {
                   ),),
               ),
         ],),
+        Image.asset("assets/images/Logo_Agrova.png")
   ] ),);
   }
 }
