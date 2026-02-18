@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wahyu_belajar_flutter/tugas2flutter/tugas2flutter.dart';
+import 'package:wahyu_belajar_flutter/tugas3flutter/tugas3flutter.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: Tugas2Flutter(),
+      home: Tugas3Flutter(),
     );
   }
 }
