@@ -6,6 +6,7 @@ import 'package:wahyu_belajar_flutter/tugas7dan8flutter/datepicker.dart';
 import 'package:wahyu_belajar_flutter/tugas7dan8flutter/timepicker.dart';
 import 'package:wahyu_belajar_flutter/tugas7dan8flutter/tugas7flutter.dart';
 import 'package:wahyu_belajar_flutter/tugas8flutter/home.dart';
+import 'package:wahyu_belajar_flutter/tugas9flutter/tugas9screen.dart';
 
 
 void main() {
@@ -38,7 +39,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: Home8(),
+      home: Tugas9Screen(),
     );
   }
 }

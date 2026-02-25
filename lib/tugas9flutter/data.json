@@ -1,0 +1,116 @@
+[
+    {
+        "Nama" : "Bila",
+        "Alamat" : "Jakarta Utara",
+        "Produk" : "Kentang",
+        "Foto Produk" : "https://i.pinimg.com/736x/6a/98/1b/6a981b9088e3ca2da5c4bd7b19f19f9d.jpg"
+    },
+    {
+        "Nama" : "Kotjek",
+        "Alamat" : "Jakarta Pusat",
+        "Produk" : "Wortel",
+        "Foto Produk" : "https://i.pinimg.com/736x/ea/fc/b6/eafcb69daa8ab8b10c526c177a0da8d8.jpg"
+    },
+     {
+    "Nama": "Imam",
+    "Alamat": "Jakarta Selatan",
+    "Produk": "Tomat",
+    "Foto Produk": "https://i.pinimg.com/736x/24/57/c2/2457c28d8e490fcff5be25ecf3ec7bf5.jpg"
+  },
+  {
+    "Nama": "Joshua",
+    "Alamat": "Bekasi",
+    "Produk": "Cabai",
+    "Foto Produk": "https://i.pinimg.com/736x/b8/ea/cc/b8eacc6c797b6c72643c5895d27af57c.jpg"
+  },
+  {
+    "Nama": "Radit First",
+    "Alamat": "Depok",
+    "Produk": "Bayam",
+    "Foto Produk": "https://i.pinimg.com/736x/6a/9e/d1/6a9ed1474dfd220b26d1fd39cc66fbdf.jpg"
+  },
+  {
+    "Nama": "Radit Second",
+    "Alamat": "Bogor",
+    "Produk": "Bawang Merah",
+    "Foto Produk": "https://i.pinimg.com/736x/ff/8d/8a/ff8d8a9e8c3d9a5f8d2c1f3a9d4e8f2a.jpg"
+  },
+  {
+    "Nama": "Bonar",
+    "Alamat": "Tangsel",
+    "Produk": "Sawi",
+    "Foto Produk": "https://i.pinimg.com/736x/1c/7b/aa/1c7baa9c0f8c7e6a4b8f2c6d9e4f1a2b.jpg"
+  },
+  {
+    "Nama": "Alvin",
+    "Alamat": "Jakarta Timur",
+    "Produk": "Jagung",
+    "Foto Produk": "https://i.pinimg.com/736x/ab/cd/ef/abcdef1234567890abcdef1234567890.jpg"
+  },
+  {
+    "Nama": "Citra",
+    "Alamat": "Jakarta Barat",
+    "Produk": "Terong",
+    "Foto Produk": "https://i.pinimg.com/736x/12/34/56/123456abcdef7890abcdef1234567890.jpg"
+  },
+  {
+    "Nama": "Benying",
+    "Alamat": "Bekasi",
+    "Produk": "Kangkung",
+    "Foto Produk": "https://i.pinimg.com/736x/98/76/54/987654abcdef123456abcdef12345678.jpg"
+  },
+  {
+    "Nama": "Clara",
+    "Alamat": "Depok",
+    "Produk": "Brokoli",
+    "Foto Produk": "https://i.pinimg.com/736x/45/67/89/456789abcdef123456abcdef12345678.jpg"
+  },
+  {
+    "Nama": "Regie",
+    "Alamat": "Bogor",
+    "Produk": "Selada",
+    "Foto Produk": "https://i.pinimg.com/736x/aa/bb/cc/aabbccddeeff00112233445566778899.jpg"
+  },
+  {
+    "Nama": "Wahyu",
+    "Alamat": "Jakarta Selatan",
+    "Produk": "Labu",
+    "Foto Produk": "https://i.pinimg.com/736x/dd/ee/ff/ddeeff00112233445566778899aabbcc.jpg"
+  },
+  {
+    "Nama": "Ardham",
+    "Alamat": "Jakarta Utara",
+    "Produk": "Timun",
+    "Foto Produk": "https://i.pinimg.com/736x/11/22/33/11223344556677889900aabbccddeeff.jpg"
+  },
+  {
+    "Nama": "Faisal",
+    "Alamat": "Jakarta Pusat",
+    "Produk": "Paprika",
+    "Foto Produk": "https://i.pinimg.com/736x/99/88/77/99887766554433221100ffeeddccbbaa.jpg"
+  },
+  {
+    "Nama": "Harits",
+    "Alamat": "Tangsel",
+    "Produk": "Ubi",
+    "Foto Produk": "https://i.pinimg.com/736x/aa/11/bb/aa11bb22cc33dd44ee55ff6677889900.jpg"
+  },
+  {
+    "Nama": "Erik",
+    "Alamat": "Bekasi",
+    "Produk": "Singkong",
+    "Foto Produk": "https://i.pinimg.com/736x/cc/dd/ee/ccddee11223344556677889900aabbcc.jpg"
+  },
+  {
+    "Nama": "Bonar",
+    "Alamat": "Depok",
+    "Produk": "Kacang Panjang",
+    "Foto Produk": "https://i.pinimg.com/736x/ff/aa/bb/ffaabbccddeeff001122334455667788.jpg"
+  },
+  {
+    "Nama": "Wildan",
+    "Alamat": "Bogor",
+    "Produk": "Kol",
+    "Foto Produk": "https://i.pinimg.com/736x/22/33/44/223344556677889900aabbccddeeff11.jpg"
+  }
+]
