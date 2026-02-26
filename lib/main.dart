@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wahyu_belajar_flutter/tugas10flutter/loginsc10.dart';
 import 'package:wahyu_belajar_flutter/tugas7dan8flutter/checkbox.dart';
 import 'package:wahyu_belajar_flutter/tugas7dan8flutter/dropdown.dart';
 import 'package:wahyu_belajar_flutter/tugas7dan8flutter/switch.dart';
@@ -39,7 +40,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: Tugas9Screen(),
+      home: Tugas10Flutter(),
     );
   }
 }
