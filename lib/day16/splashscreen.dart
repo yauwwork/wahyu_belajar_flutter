@@ -1,10 +1,10 @@
 import 'dart:ffi';
 
 import 'package:flutter/material.dart';
-import 'package:wahyu_belajar_flutter/SQL/database/preferences.dart';
+import 'package:wahyu_belajar_flutter/day16/SQL/database/preferences.dart';
 import 'package:wahyu_belajar_flutter/tugas10flutter/homepage.dart';
-import 'package:wahyu_belajar_flutter/tugas11flutter/loginagrova.dart';
-import 'package:wahyu_belajar_flutter/tugas11flutter/navigator.dart';
+import 'package:wahyu_belajar_flutter/day16/loginagrova.dart';
+import 'package:wahyu_belajar_flutter/day16/navigator.dart';
 
 class SplashSc11 extends StatefulWidget {
   const SplashSc11({super.key});
@@ -41,16 +41,12 @@ class _SplashSc11State extends State<SplashSc11> {
           gradient: LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
-            colors: [
-              Color(0xFF4CAF84),
-              Color(0xFF2F80ED),
-            ],
+            colors: [Color(0xFF4CAF84), Color(0xFF2F80ED)],
           ),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-
             // LOGO
             Container(
               width: 140,
@@ -59,11 +55,7 @@ class _SplashSc11State extends State<SplashSc11> {
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(30),
               ),
-              child: Icon(
-                Icons.eco,
-                size: 80,
-                color: Color(0xFF4CAF84),
-              ),
+              child: Icon(Icons.eco, size: 80, color: Color(0xFF4CAF84)),
             ),
 
             SizedBox(height: 30),
@@ -79,10 +71,7 @@ class _SplashSc11State extends State<SplashSc11> {
 
             Text(
               "Terhubung dengan sumber terbaik",
-              style: TextStyle(
-                fontSize: 14,
-                color: Colors.white70,
-              ),
+              style: TextStyle(fontSize: 14, color: Colors.white70),
             ),
           ],
         ),

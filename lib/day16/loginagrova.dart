@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:wahyu_belajar_flutter/SQL/database/preferences.dart';
-import 'package:wahyu_belajar_flutter/SQL/database/sqflite.dart';
-import 'package:wahyu_belajar_flutter/SQL/models/user_models.dart';
+import 'package:wahyu_belajar_flutter/day16/SQL/database/preferences.dart';
+import 'package:wahyu_belajar_flutter/day16/SQL/database/sqflite.dart';
+import 'package:wahyu_belajar_flutter/day16/SQL/models/user_models.dart';
 import 'package:wahyu_belajar_flutter/tugas10flutter/homepage.dart';
 import 'package:wahyu_belajar_flutter/tugas10flutter/navigator.dart';
 
@@ -26,7 +26,6 @@ class _LoginAgrovaPageState extends State<LoginAgrovaPage> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-
               /// LOGO
               Container(
                 height: 90,
@@ -34,17 +33,10 @@ class _LoginAgrovaPageState extends State<LoginAgrovaPage> {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   gradient: const LinearGradient(
-                    colors: [
-                      Color(0xFF4CAF50),
-                      Color(0xFF2196F3),
-                    ],
+                    colors: [Color(0xFF4CAF50), Color(0xFF2196F3)],
                   ),
                 ),
-                child: const Icon(
-                  Icons.eco,
-                  color: Colors.white,
-                  size: 50,
-                ),
+                child: const Icon(Icons.eco, color: Colors.white, size: 50),
               ),
 
               const SizedBox(height: 15),
@@ -63,9 +55,7 @@ class _LoginAgrovaPageState extends State<LoginAgrovaPage> {
 
               const Text(
                 "Terhubung dengan sumber terbaik",
-                style: TextStyle(
-                  color: Colors.black54,
-                ),
+                style: TextStyle(color: Colors.black54),
               ),
 
               const SizedBox(height: 30),
@@ -82,13 +72,12 @@ class _LoginAgrovaPageState extends State<LoginAgrovaPage> {
                       color: Colors.grey.withOpacity(0.2),
                       blurRadius: 10,
                       offset: const Offset(0, 5),
-                    )
+                    ),
                   ],
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-
                     /// EMAIL
                     const Text(
                       "Email",
@@ -103,13 +92,16 @@ class _LoginAgrovaPageState extends State<LoginAgrovaPage> {
                         prefixIcon: const Icon(Icons.email_outlined),
                         filled: true,
                         fillColor: Colors.grey[100],
-                        contentPadding: const EdgeInsets.symmetric(vertical: 15),
+                        contentPadding: const EdgeInsets.symmetric(
+                          vertical: 15,
+                        ),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(30),
                           borderSide: BorderSide.none,
                         ),
                       ),
                     ),
+
                     // TextField(
                     //   controller: emailController,
                     //   decoration: InputDecoration(
@@ -124,7 +116,6 @@ class _LoginAgrovaPageState extends State<LoginAgrovaPage> {
                     //     ),
                     //   ),
                     // ),
-
                     const SizedBox(height: 20),
 
                     /// PASSWORD
@@ -141,9 +132,7 @@ class _LoginAgrovaPageState extends State<LoginAgrovaPage> {
                         prefixIcon: const Icon(Icons.lock_outline),
                         suffixIcon: IconButton(
                           icon: Icon(
-                            isObscure
-                                ? Icons.visibility_off
-                                : Icons.visibility,
+                            isObscure ? Icons.visibility_off : Icons.visibility,
                           ),
                           onPressed: () {
                             setState(() {
@@ -153,7 +142,9 @@ class _LoginAgrovaPageState extends State<LoginAgrovaPage> {
                         ),
                         filled: true,
                         fillColor: Colors.grey[100],
-                        contentPadding: const EdgeInsets.symmetric(vertical: 15),
+                        contentPadding: const EdgeInsets.symmetric(
+                          vertical: 15,
+                        ),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(30),
                           borderSide: BorderSide.none,
@@ -183,24 +174,28 @@ class _LoginAgrovaPageState extends State<LoginAgrovaPage> {
                       child: ElevatedButton(
                         onPressed: () async {
                           final UserModel? login = await DBHelper.loginUser(
-                            email: emailController.text, 
-                            password: passwordController.text);
-                        
-                        if (login != null) {
-                          PreferenceHandler().storingIsLogin(true);
-                          ScaffoldMessenger.of(
-                            context,
-                          ).showSnackBar(SnackBar(content:Text("Login berhasil")));
-                          await Future.delayed(Duration(seconds: 2));
-                          context.push(Home10(alamat: "",nama: "", telepon: "",));
-                        } else {
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(
-                              content: Text("Login Gagal, email atau password tidak terdaftar",
-                              ),
-                              ),
+                            email: emailController.text,
+                            password: passwordController.text,
                           );
-                        }
+
+                          if (login != null) {
+                            PreferenceHandler().storingIsLogin(true);
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(content: Text("Login berhasil")),
+                            );
+                            await Future.delayed(Duration(seconds: 2));
+                            context.push(
+                              Home10(alamat: "", nama: "", telepon: ""),
+                            );
+                          } else {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text(
+                                  "Login Gagal, email atau password tidak terdaftar",
+                                ),
+                              ),
+                            );
+                          }
                         },
                         style: ElevatedButton.styleFrom(
                           shape: RoundedRectangleBorder(
@@ -212,13 +207,9 @@ class _LoginAgrovaPageState extends State<LoginAgrovaPage> {
                         child: Ink(
                           decoration: const BoxDecoration(
                             gradient: LinearGradient(
-                              colors: [
-                                Color(0xFF2F5BD3),
-                                Color(0xFF4C7DF0),
-                              ],
+                              colors: [Color(0xFF2F5BD3), Color(0xFF4C7DF0)],
                             ),
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(30)),
+                            borderRadius: BorderRadius.all(Radius.circular(30)),
                           ),
                           child: const Center(
                             child: Text(
@@ -258,13 +249,12 @@ class _LoginAgrovaPageState extends State<LoginAgrovaPage> {
                       height: 50,
                       child: OutlinedButton(
                         onPressed: () {
-                          DBHelper.registerUser
-                          (
-                          UserModel(
-                            email: emailController.text,
-                            password: passwordController.text,
-                          
-                          ));
+                          DBHelper.registerUser(
+                            UserModel(
+                              email: emailController.text,
+                              password: passwordController.text,
+                            ),
+                          );
 
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(content: Text("Pendaftaran Berhasil")),

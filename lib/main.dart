@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:wahyu_belajar_flutter/day16/cr_siswa.dart';
 import 'package:wahyu_belajar_flutter/tugas10flutter/loginsc10.dart';
-import 'package:wahyu_belajar_flutter/tugas11flutter/loginagrova.dart';
-import 'package:wahyu_belajar_flutter/tugas11flutter/splashscreen.dart';
+import 'package:wahyu_belajar_flutter/day16/loginagrova.dart';
+import 'package:wahyu_belajar_flutter/day16/splashscreen.dart';
+import 'package:wahyu_belajar_flutter/tugas11Flutter/tugas11.dart';
 import 'package:wahyu_belajar_flutter/tugas7dan8flutter/checkbox.dart';
 import 'package:wahyu_belajar_flutter/tugas7dan8flutter/dropdown.dart';
 import 'package:wahyu_belajar_flutter/tugas7dan8flutter/switch.dart';
@@ -10,7 +12,6 @@ import 'package:wahyu_belajar_flutter/tugas7dan8flutter/timepicker.dart';
 import 'package:wahyu_belajar_flutter/tugas7dan8flutter/tugas7flutter.dart';
 import 'package:wahyu_belajar_flutter/tugas8flutter/home.dart';
 import 'package:wahyu_belajar_flutter/tugas9flutter/tugas9screen.dart';
-
 
 void main() {
   runApp(const MyApp());
@@ -42,7 +43,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: SplashSc11(),
+      home: Tugas11Flutter(),
     );
   }
 }
