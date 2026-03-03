@@ -157,24 +157,24 @@ class _Tugas11FlutterState extends State<Tugas11Flutter> {
       ),
     );
   }
+}
 
-  InputDecoration formdecoration({
-    required String hintText,
-    required String labelText,
-  }) {
-    return InputDecoration(
-      hintText: hintText,
-      labelText: labelText,
-      border: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(20),
-        borderSide: BorderSide(color: Colors.blueAccent),
-      ),
-      focusedBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(12),
-        borderSide: BorderSide(color: Colors.blue, width: 3),
-      ),
-    );
-  }
+InputDecoration formdecoration({
+  required String hintText,
+  required String labelText,
+}) {
+  return InputDecoration(
+    hintText: hintText,
+    labelText: labelText,
+    border: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(20),
+      borderSide: BorderSide(color: Colors.blueAccent),
+    ),
+    focusedBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(12),
+      borderSide: BorderSide(color: Colors.blue, width: 3),
+    ),
+  );
 }
 
 class ProdukController {
@@ -189,6 +189,24 @@ class ProdukController {
     final List<Map<String, dynamic>> results = await dbs.query("produk");
     print(results.map((e) => ProdukModel.fromMap(e)).toList());
     return results.map((e) => ProdukModel.fromMap(e)).toList();
+  }
+
+  static Future<int> updateProduk(ProdukModel produk) async {
+    final dbs = await DBHelper.db();
+    if (produk.id == null) {
+      throw Exception("ID Wajib ada");
+    }
+    return dbs.update(
+      'produk',
+      produk.toMap(),
+      where: 'id = ?',
+      whereArgs: [produk.id],
+    );
+  }
+
+  static Future<int> deleteProduk(int id) async {
+    final dbs = await DBHelper.db();
+    return dbs.delete('produk', where: 'id = ?', whereArgs: [id]);
   }
 }
 
