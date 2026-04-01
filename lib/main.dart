@@ -4,6 +4,7 @@ import 'package:wahyu_belajar_flutter/tugas10flutter/loginsc10.dart';
 import 'package:wahyu_belajar_flutter/day16/loginagrova.dart';
 import 'package:wahyu_belajar_flutter/day16/splashscreen.dart';
 import 'package:wahyu_belajar_flutter/tugas11Flutter/tugas11.dart';
+import 'package:wahyu_belajar_flutter/tugas14flutter/views/pokemon_list_name.dart';
 import 'package:wahyu_belajar_flutter/tugas7dan8flutter/checkbox.dart';
 import 'package:wahyu_belajar_flutter/tugas7dan8flutter/dropdown.dart';
 import 'package:wahyu_belajar_flutter/tugas7dan8flutter/switch.dart';
@@ -43,7 +44,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: Tugas11Flutter(),
+      home: PokemonListScreen(),
     );
   }
 }
