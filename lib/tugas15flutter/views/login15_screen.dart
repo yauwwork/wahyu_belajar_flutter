@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:wahyu_belajar_flutter/day16/SQL/database/preferences.dart';
 import 'package:wahyu_belajar_flutter/tugas15flutter/API/login.dart';
 import 'package:wahyu_belajar_flutter/tugas15flutter/models/login_model.dart';
+import 'package:wahyu_belajar_flutter/tugas15flutter/views/profil15.dart';
 import 'package:wahyu_belajar_flutter/tugas15flutter/views/register15_screen.dart';
 
 class Login15Page extends StatefulWidget {
@@ -25,12 +26,9 @@ class _Login15PageState extends State<Login15Page> {
   }
 
   Future<void> login() async {
-    if (emailController.text.isEmpty ||
-        passwordController.text.isEmpty) {
+    if (emailController.text.isEmpty || passwordController.text.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Email dan password wajib diisi'),
-        ),
+        const SnackBar(content: Text('Email dan password wajib diisi')),
       );
       return;
     }
@@ -49,33 +47,25 @@ class _Login15PageState extends State<Login15Page> {
         await PreferenceHandler().storingIsLogin(true);
 
         if (response.data?.token != null) {
-          await PreferenceHandler().storingToken(
-            response.data!.token!,
-          );
+          await PreferenceHandler().storingToken(response.data!.token!);
         }
 
         if (!mounted) return;
 
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text(response.message ?? 'Login berhasil'),
-          ),
+          SnackBar(content: Text(response.message ?? 'Login berhasil')),
         );
 
-        // Navigator.pushReplacement(
-        //   context,
-        //   MaterialPageRoute(
-        //     builder: (context) => const HomePage(),
-        //   ),
-        // );
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => const ProfileScreen()),
+        );
       }
     } catch (e) {
       if (!mounted) return;
 
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text(e.toString().replaceAll('Exception: ', '')),
-        ),
+        SnackBar(content: Text(e.toString().replaceAll('Exception: ', ''))),
       );
     } finally {
       setState(() {
@@ -215,9 +205,7 @@ class _Login15PageState extends State<Login15Page> {
                     ),
                   ),
                   child: isLoading
-                      ? const CircularProgressIndicator(
-                          color: Colors.white,
-                        )
+                      ? const CircularProgressIndicator(color: Colors.white)
                       : const Text(
                           'Sign in',
                           style: TextStyle(

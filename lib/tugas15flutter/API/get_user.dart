@@ -11,13 +11,17 @@ import 'package:wahyu_belajar_flutter/tugas15flutter/models/get_model.dart';
 // }
 Future<GetUserModel?> getUser() async {
   var token = await PreferenceHandler.getToken();
-  final response = await http.get(
-    Uri.parse(Endpoint.register),
 
-    headers: {"Accept": "application/json", "Authentication": token.toString()},
+  final response = await http.get(
+    Uri.parse(Endpoint.profile), // ✅ FIX endpoint
+    headers: {
+      "Accept": "application/json",
+      "Authorization": "Bearer $token", // ✅ FIX header
+    },
   );
 
-  log(response.body);
+  log("PROFILE RESPONSE: ${response.body}");
+
   if (response.statusCode == 200) {
     return GetUserModel.fromJson(json.decode(response.body));
   } else {
